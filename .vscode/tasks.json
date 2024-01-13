@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "serve",
+			"group": "build",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"label": "npm: serve",
+			"icon": { "color": "terminal.ansiBlue", "id": "server" },
+			"detail": "webpack serve",
+			"isBackground": true
+		},
+		{
+			"type": "npm",
+			"script": "tailwind:watch",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: tailwind:watch",
+			"icon": { "color": "terminal.ansiBlue", "id": "triangle-up" },
+			"detail": "npx tailwindcss -i ./src/input.css -o ./dist/main.css --watch",
+			"isBackground": true
+		}
+	],
+}

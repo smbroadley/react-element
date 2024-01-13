@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="main.css" rel="stylesheet" >
+        <style>
+            .background {
+                background: linear-gradient( #62ddf2, #aceef2);
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body class="background p-20">
+        <div class="p-6 flex flex-col bg-slate-800 text-white rounded-xl shadow-lg">
+            <h1 class="text-3xl text-cyan-100 font-bold pb-4">ReactElement</h1>
+            <p>Custom <b>HTMLElement</b> wrapper for <b>React</b> components, helping you with:</p>
+            <ul class="py-4 font-mono *:bg-slate-700 *:p-2 *:m-2 *:rounded-md font-black w-fit">
+                <li>prop-conversion</li>
+                <li>lifetime management</li>
+                <li>registration</li>
+            </ul>
+            <button type="button">
+                Save changes
+            </button>
+            <hr class="mb-10">
+            <re-person name="Stephen" age="41" ></re-Person>
+        </div>
+    </body>
+</html>
