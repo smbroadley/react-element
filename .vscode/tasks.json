@@ -5,10 +5,25 @@
 			"type": "npm",
 			"script": "serve",
 			"group": "build",
-			"problemMatcher": [
-				"$tsc-watch"
-			],
-			"label": "npm: serve",
+			"problemMatcher": {
+				"owner": "Tailwind",
+				"fileLocation": ["relative", "${workspaceFolder}"],
+				"pattern": {
+                    "regexp": "^(.*)\\((\\d+),(\\d+)\\):\\s+(error|warning)\\s+(TS\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "code": 5,
+                    "message": 6
+                },
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^asset.*",
+					"endsPattern": "^webpack .* compiled successfully.*"
+				}
+			},
+			"label": "Webpack & Serve",
 			"icon": { "color": "terminal.ansiBlue", "id": "server" },
 			"detail": "webpack serve",
 			"isBackground": true
@@ -17,11 +32,34 @@
 			"type": "npm",
 			"script": "tailwind:watch",
 			"group": "build",
-			"problemMatcher": [],
-			"label": "npm: tailwind:watch",
+			"problemMatcher": {
+				"owner": "Tailwind",
+				"fileLocation": ["relative", "${workspaceFolder}"],
+				"pattern": {
+                    "regexp": "^(.*)\\((\\d+),(\\d+)\\):\\s+(error|warning)\\s+(TS\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "code": 5,
+                    "message": 6
+                },
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^Rebuilding.*",
+					"endsPattern": "^Done in .*"
+				}
+			},
+			"label": "Tailwind",
 			"icon": { "color": "terminal.ansiBlue", "id": "triangle-up" },
 			"detail": "npx tailwindcss -i ./src/input.css -o ./dist/main.css --watch",
 			"isBackground": true
-		}
+		},
+		{
+            "label": "build",
+            "type": "shell",
+            "dependsOn": ["Webpack & Serve", "Tailwind"],
+            "command": "echo Build complete.",
+        }
 	],
 }

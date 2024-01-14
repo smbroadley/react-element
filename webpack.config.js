@@ -13,7 +13,7 @@ const config = {
         libraryTarget: 'umd'
     },
     devServer: {
-        open: true,
+        open: false,
         host: 'localhost',
         static: './dist',
     },
