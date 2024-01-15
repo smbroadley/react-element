@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactElement } from './ReactElement'
+import ReactElement from './ReactElement'
 
 interface IProps {
     age: number;

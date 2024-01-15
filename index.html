@@ -15,17 +15,16 @@
     <body class="background p-20">
         <div class="p-6 flex flex-col bg-slate-800 text-white rounded-xl shadow-lg">
             <h1 class="text-3xl text-cyan-100 font-bold pb-4">ReactElement</h1>
-            <p>Custom <b>HTMLElement</b> wrapper for <b>React</b> components, helping you with:</p>
-            <ul class="py-4 font-mono *:bg-slate-700 *:p-2 *:m-2 *:rounded-md font-black w-fit">
-                <li>prop-conversion</li>
-                <li>lifetime management</li>
-                <li>registration</li>
+            <p>Custom <b>HTMLElement</b> wrapper for <b>React</b> components</p>
+            <ul class="py-4 font-mono *:bg-slate-700 *:p-4 *:m-2 *:rounded-md *:gap-3 *:flex *:align-middle font-black w-fit">
+                <li><re-icon class="text-cyan-300" name="registered"></re-icon>registration</li>
+                <li><re-icon class="text-cyan-300" name="copy"></re-icon>attr-to-prop conversion</li>
+                <li><re-icon class="text-cyan-300" name="heart"></re-icon>lifetime management</li>
             </ul>
-            <button type="button">
-                Save changes
-            </button>
-            <hr class="mb-10">
-            <re-person name="Stephen" age="41" ></re-Person>
+            <hr class="mb-3 border-cyan-300">
+            <div class="my-6 p-5 bg-slate-600 rounded-lg">
+                <re-person name="Stephen" age="41" ></re-Person>
+            </div>
         </div>
     </body>
 </html>

@@ -51,7 +51,7 @@
 				}
 			},
 			"label": "Tailwind",
-			"icon": { "color": "terminal.ansiBlue", "id": "triangle-up" },
+			"icon": { "color": "terminal.ansiBlue", "id": "book" },
 			"detail": "npx tailwindcss -i ./src/input.css -o ./dist/main.css --watch",
 			"isBackground": true
 		},
